@@ -1,4 +1,4 @@
-//生成webservice客户端代码
+## 生成webservice客户端代码
 
 **wsdl**
 - URL
@@ -14,4 +14,34 @@ http://101.226.250.194:7501/axis2/services/SajtIssueInvoiceService?wsdl
       例如:
       wsdl2java -uri http://x.x.x.x:x/axis2/services/service?wsdl -p biz.ws -o .
       wsdl2java -uri SajtIssueInvoiceService?wsdl -p biz.ws -o .
+```
+
+```java
+@Bean(name = "WebService")
+public IntegrationEntryStub webService(@Value("${outer.network.proxy.host}") String host,
+                                              @Value("${outer.network.proxy.port}") int port,
+                                              @Value("${server.ip}") String serverIp,
+                                              @Value("${server.port}") String serverPort) {
+    try {
+        IntegrationEntryStub ws = new IntegrationEntryStub(serverIp, serverPort, "2.0.0");
+        ServiceClient client = ws._getServiceClient();
+        client.getOptions().setTimeOutInMilliSeconds(5000);
+        HttpTransportProperties.ProxyProperties proxyProperties = new HttpTransportProperties.ProxyProperties();
+        proxyProperties.setProxyName(host);
+        proxyProperties.setProxyPort(port);
+        client.getOptions().setTransportInProtocol(Constants.TRANSPORT_HTTP);
+        client.getOptions().setProperty(HTTPConstants.PROXY, proxyProperties);
+
+        HttpTransportProperties.Authenticator authenticator = new HttpTransportProperties.Authenticator();
+        authenticator.setUsername(authName);
+        authenticator.setPassword(authPassword);
+        client.getOptions().setProperty(HTTPConstants.AUTHENTICATE, authenticator);
+
+        return ws;
+    } catch (AxisFault axisFault) {
+        axisFault.printStackTrace();
+    }
+
+    return null;
+}
 ```
