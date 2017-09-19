@@ -1,0 +1,17 @@
+public class PlatformServiceImplTest extends JunitBaseTest {
+
+    @Autowired
+    private PlatformService platformService;
+
+    @Test
+    public void refreshAccessToken() throws Exception {
+        platformService.refreshAccessToken();
+    }
+
+    @Test
+    public void getTokenFromRedis() throws Exception {
+        String tokenFromRedis = platformService.getTokenFromRedis();
+        System.out.println(tokenFromRedis);
+    }
+
+}
