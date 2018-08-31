@@ -1,9 +1,7 @@
 /**
 * spring boot 测试基类
 */
-package cn.webank.mumble.mpc.giftcard;
-
-import xxx.MumbleServerDefaultPropertiesUtil;
+import xxx.ServerDefaultPropertiesUtil;
 import xxx.server.StartServer;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.runner.RunWith;
@@ -33,7 +31,7 @@ public class JunitBaseTest {
         }
 
 
-        Map<String, Object> defaultConfigMap = MumbleServerDefaultPropertiesUtil.getinitialDefaultConfig();
+        Map<String, Object> defaultConfigMap = ServerDefaultPropertiesUtil.getinitialDefaultConfig();
         //workaround
         defaultConfigMap.put("spring.jackson.time-zone", "Asia/Shanghai");
         defaultConfigMap.entrySet().stream().forEach(entry -> {
