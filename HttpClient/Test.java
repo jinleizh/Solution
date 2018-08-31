@@ -35,7 +35,7 @@ public class TestServiceImpl implements TestService {
     }
 
     public Test test() {
-        LOGGER.info("bizSeqNo={} Test begin, request={}", MumbleContextUtil.getBizSeqNo(), request);
+        LOGGER.info("bizSeqNo={} Test begin, request={}", ContextUtil.getBizSeqNo(), request);
 
         //1.计算签名
         PresentResponse response = new PresentResponse();
