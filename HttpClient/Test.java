@@ -1,5 +1,3 @@
-package cn.webank.pmbank.mbac.biz.service.impl;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +23,7 @@ public class TestServiceImpl implements TestService {
     @PostConstruct
     public void init() {
         try {
-            httpClient = HttpClientUtils.acceptsUntrustedCertsHttpClient(webankProxy, webankProxyPort);
+            httpClient = HttpClientUtils.acceptsUntrustedCertsHttpClient(proxy, proxyPort);
         } catch (Exception e) {
             LOGGER.error("init httpClient", e);
         }
