@@ -1,0 +1,32 @@
+The reliability and scalability of a system is dependent on how its application state is managed
+
+### Google BigTable
+wide column
+
+
+### Google Spanner
+Spanner stores large amounts of mutable structured data. Spanner allows users to perform arbitrary queries using SQL with relational data while maintaining strong consistency and high availability for that data with synchronous replication.
+
+Key features of Spanner:
+
+Transactions can be applied across rows, columns, tables, and databases within a Spanner universe.
+Clients can control the replication and placement of data using automatic multi-site replication and failover.
+Replication is synchronous and strongly consistent.
+Reads are strongly consistent and data is versioned to allow for stale reads: clients can read previous versions of data, subject to garbage collection windows.
+Supports a native SQL interface for reading and writing data.
+
+Spanner uses the Paxos algorithm as part of its operation to shard (partition) data across hundreds of servers.[1] It makes heavy use of hardware-assisted clock synchronization using GPS clocks and atomic clocks to ensure global consistency.[1]
+
+Google's F1 SQL database management system (DBMS) is built on top of Spanner,[5] replacing Google's custom MySQL variant.[6]
+
+### Google F1
+
+
+Experience at Amazon has shown that data stores that provide
+ACID guarantees tend to have poor availability. This has been
+widely acknowledged by both the industry and academia
+### Dynamo
+key/value
+
+paxos 
+- Paxos, a protocol for solving consensus in a network to maintain strict consistency requirements for small groups of unreliable processes. Not practical when larger number of nodes are involved.
