@@ -30,3 +30,9 @@ key/value
 
 paxos 
 - Paxos, a protocol for solving consensus in a network to maintain strict consistency requirements for small groups of unreliable processes. Not practical when larger number of nodes are involved.
+
+Gossip protocols
+- which maintain relaxed consistency requirements amongst a very large group of nodes. 
+
+
+
