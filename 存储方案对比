@@ -35,4 +35,36 @@ Gossip protocols
 - which maintain relaxed consistency requirements amongst a very large group of nodes. 
 
 
+NoSQL
+- 优点
+数据模型简单,key/value对,性能好,查询依赖于key
+- 缺点
+如果数据更新非常频繁，或者查询条件非常复杂，则不适合key/value nosql
+
+Key-Value stores are ideal for applications with simple data models and require high velocity read & writes.
+
+Sample use cases include:
+
+Session management
+Profiles, preferences & configurations
+Data Caching
+Storing multimedia files or large objects
+Key-Value stores are not suitable when the application requires frequent updates or complex queries involving specific data values, multiple unique keys and relationships between them.
+
+Examples of Key-Value databases include – Redis and Riak.
+
+
+Document store
+- 特点:
+key/document, in document, there are attributes, so we can create index on these attributes.
+flexible schema and complex querying capabilities
+
+Due to its flexible schema and complex querying capabilities, Document Stores are popular and suitable for variety of use cases such as:
+
+Content management systems
+E-commerce websites
+Middleware applications that use JSON
+Document stores are not suitable if the application requires complex transactions with multiple operations.
+
+Examples of Document Store databases include – MongoDB and Couchbase.
 
