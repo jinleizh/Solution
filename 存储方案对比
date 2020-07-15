@@ -89,7 +89,7 @@ Cassandra - AP 或者 CP， depends on configuration
 - DBAAS
 - 支持超大数据规模, PT级别
 
-Mongodb 优点 - 结构化和半结构化数据
+Mongodb 优点 - 结构化和半结构化数据 - CP
 - schemaless
 - JSON格式
 - 支持secondary index 
