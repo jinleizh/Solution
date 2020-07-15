@@ -68,3 +68,33 @@ Document stores are not suitable if the application requires complex transaction
 
 Examples of Document Store databases include – MongoDB and Couchbase.
 
+
+HBASE - CP - 优点
+- 强一致性
+- 范围查找
+- hadoop生态
+- 方便做统计和日志分析
+- 适合write-heavy应用
+缺点
+- master 单点
+- 部署成本高，需要部署zookeeper，HDFS
+- 学习曲线高
+- 非DBaaS
+- 牺牲了随机读性能
+
+Cassandra - AP 或者 CP， depends on configuration
+- 高性能读写
+- masterless
+- 有查询语句
+- DBAAS
+- 支持超大数据规模, PT级别
+
+Mongodb 优点 - 结构化和半结构化数据
+- schemaless
+- JSON格式
+- 支持secondary index 
+- 可以做复杂查询
+缺点
+- schema很难追踪，不知道存储的是啥东西
+- 不支持事务
+- 不适合超大规模数据,例如 PT级别
