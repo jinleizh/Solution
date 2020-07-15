@@ -94,6 +94,7 @@ Mongodb 优点 - 结构化和半结构化数据 - CP
 - JSON格式
 - 支持secondary index 
 - 可以做复杂查询
+- 
 缺点
 - schema很难追踪，不知道存储的是啥东西
 - 不支持事务
