@@ -13,7 +13,7 @@ https://stackoverflow.com/questions/6658313/how-to-generate-a-git-patch-for-a-sp
 
 steps to create a patch
 ```
-git format-patch -数量 <sha> --stdout > patch名称
+git format-patch -n <sha> --stdout > patch_file_name  (-n means n commits from <SHA>)
 git apply --stat file.patch
 git apply --check file.patch
 git am --signoff < file.patch
