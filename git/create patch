@@ -1,0 +1,19 @@
+```
+git format-patch -1 <sha> --stdout > patch_file_name
+```
+
+for example: 
+```
+git format-patch -10 HEAD --stdout > patch_file_name
+```
+It means create a patch which will include 10 commit from the topmost commit
+
+stack overflow
+https://stackoverflow.com/questions/6658313/how-to-generate-a-git-patch-for-a-specific-commit
+
+steps to create a patch
+```
+git apply --stat file.patch
+git apply --check file.patch
+git am --signoff < file.patch
+```
