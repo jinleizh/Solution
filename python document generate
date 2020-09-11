@@ -1,3 +1,5 @@
 sphinx-quickstart doc
 sphinx-apidoc -o ./source ..
 sphinx-build -b html ./source ./build
+
+sphinx-apidoc -o ./source .. -f -e -P -M -a
