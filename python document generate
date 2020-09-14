@@ -1,5 +1,9 @@
 sphinx-quickstart doc
 sphinx-apidoc -o ./source ..
 sphinx-build -b html ./source ./build
-
 sphinx-apidoc -o ./source .. -f -e -P -M -a
+
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
