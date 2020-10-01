@@ -1,0 +1,30 @@
+reset hard to previous commit
+```
+git reset --hard HEAD^
+```
+
+reset hard roll back
+```
+git reset --hard HEAD@{1}
+```
+
+https://devconnected.com/how-to-git-reset-to-head/#:~:text=To%20hard%20reset%20files%20to,option%20and%20specify%20the%20HEAD.&text=The%20purpose%20of%20the%20%E2%80%9Cgit,before%20HEAD%20and%20so%20on).
+
+go back the the commit which is 3 commits before HEAD
+git reset --soft HEAD~3  
+
+git reset --hard
+仓库, stage, work区域将不会有差异
+所有的改动都被回滚到了新的head上, 如果想要回滚, 参考上面roll back的命令, 回滚到指定的commit
+
+git reset --soft
+仓库和stage有差异
+stage和work不会有差异
+此时的表现就是 stage去东西, 可以重新commit, 所以如果只是需要合并commit时, 可以用这个方式
+
+git rest
+仓库和stage没差异
+stage和work区域有差异
+此时的表现就是,stage没有东西可以提交, 但是会提示你add文件, 这种通常就是用来调整commit文件的顺序, 拆提交, 合并提交
+
+
