@@ -1,0 +1,21 @@
+Feature requirement
+- transaction support
+- query pattern
+-- simple -> NoSQL
+-- complx -> SQL
+
+None Feature requirement
+- performance
+-- read
+-- write
+
+- scalability
+-- sharding
+
+- availability
+
+- consitency
+
+- security
+
+Change capture ability
