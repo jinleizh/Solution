@@ -1,3 +1,10 @@
+understand your workload
+- does it need transaction support?
+- does it need update?
+- does it need delete?
+- does it read often?
+- does it write often
+
 Feature requirement
 - transaction support
 - query pattern
