@@ -1,3 +1,12 @@
 python程序性能调优工具
 timeit
 cProfile
+line_profiler
+memory_profiler, mprof
+mprof can also create a graph that shows you how your application consumed memory over time. To get the graph, all you need to do is:
+`mprof plot`
+profilehooks
+
+Python Hash lib
+hashlib
+zlib
