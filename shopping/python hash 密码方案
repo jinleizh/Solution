@@ -1,0 +1,2 @@
+Of course, SHA is not actually recommended for creating keys of passwords. 
+Instead you should use something like scrypt instead. Another good option would be the 3rd party package, bcrypt. It is designed specifically with password hashing in mind.
