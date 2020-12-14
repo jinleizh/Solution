@@ -1,1 +1,23 @@
 https://dead-drop.me/
+
+- Replay attack
+There are several good answers here and putting them all together is where the answer ultimately lies:
+
+Block-cipher encrypt (with AES-256+) and hash (with SHA-2+) all state/nonce related information that is sent to a client. Hackers with otherwise just manipulate the data, view it to learn the patterns and circumvent everything else. Remember ... it only takes one open window.
+
+Generate a one-time random and unique nonce per request that is sent back with the POST request. This does two things: It ensures that the POST response goes with THAT request. It also allows tracking of one-time use of a given set of get/POST pairs (preventing replay).
+
+Use timestamps to make the nonce pool manageable. Store the time-stamp in an encrypted cookie per #1 above. Throw out any requests older than the maximum response time or session for the application (e.g., an hour).
+
+Store a "reasonably unique" digital fingerprint of the machine making the request with the encrypted time-stamp data. This will prevent another trick wherein the attacker steals the clients cookies to perform session-hijacking. This will ensure that the request is coming back not only once but from the machine (or close enough proximity to make it virtually impossible for the attacker to copy) the form was sent to.
+
+There are ASPNET and Java/J2EE security filter based applications that do all of the above with zero coding. Managing the nonce pool for large systems (like a stock trading company, bank or high volume secure site) is not a trivial undertaking if performance is critical.
+Would recommend looking at those products versus trying to program this for each web-application.
+
+https://stackoverflow.com/questions/44391/how-do-i-prevent-replay-attacks
+
+Can you use memory or a database to maintain any information about the user or request at all?
+
+If so, then on request for the form, I would include a hidden form field whose contents are a randomly generated number. Save this token to in application context or some sort of store (a database, flat file, etc.) when the request is rendered. When the form is submitted, check the application context or database to see if that randomly generated number is still valid (however you define valid - maybe it can expire after X minutes). If so, remove this token from the list of "allowed tokens".
+
+Thus any replayed requests would include this same token which is no longer considered valid on the server.
