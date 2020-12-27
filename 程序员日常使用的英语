@@ -1,0 +1,5 @@
+be specified by
+例子:
+postman中解释"Realm"时使用了它
+Realm: A string specified by the server in the WWW-Authenticate response header.
+
