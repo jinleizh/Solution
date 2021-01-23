@@ -1,0 +1,23 @@
+Work
+- planned work
+-- product roadmap
+-- projects
+-- Technical dept effor
+
+- unplanned work
+-- product feedback
+-- on-call
+-- suggestion
+-- bug
+
+Team 1..N
+- daily triage
+- biweekly sprint planning
+
+
+unplanned work => Engineering daily Triage => planned work
+unplanned work => Engineering daily Triage => Team 1..N
+planned work => Team 1..N
+
+task => daily triage
+task => biweekly sprint planning
