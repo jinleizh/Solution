@@ -1,0 +1,5 @@
+Decorator
+- it is used to extend behaviors, not state
+
+You must be clear on state and behavior.
+
