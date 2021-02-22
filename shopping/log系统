@@ -1,1 +1,6 @@
 日志的schma, 校验, 上报, 分析
+
+例如:
+flume-avro
+工作模式 source -> channel -> (sink & source) -> channel -> sink
+
