@@ -1,0 +1,18 @@
+for example, creating a guest account in user service and get access token from authorization service.
+- we don't check token
+- call user serviece first, but authorization service failed, in this case, access token is not created, but it is critical for the upcoming flow, 
+so we think this step is failed, client user needs to retry.
+- call authorization servier first, but user service failed, in this case, account is not created, and it is critical for the upcoming flow, so 
+we think it is failedd, client user needs to retry
+- create account needs to be idempotent
+
+
+login
+- we don't check token
+- call user service first, but authorization service is failed, in this case, token is not created, so it is failed, client user needs to retry.
+- call authorization service first, but user service is failed, in this case, user has not login, so it is failed, client user needs to retry.
+- login needs to be idempotent
+
+register
+- we don't check token
+- call user service first, but authorization service is failed, in this case, token is critical for the upcoming flow, so client user needs to retry
