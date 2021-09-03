@@ -2,7 +2,7 @@ Work
 - planned work
 -- product roadmap
 -- projects
--- Technical dept effor
+-- Technical dept effort
 
 - unplanned work
 -- product feedback
@@ -21,3 +21,19 @@ planned work => Team 1..N
 
 task => daily triage
 task => biweekly sprint planning
+
+
+Coding
+- git flow
+- sonarqube
+- unit test
+- integration test, postman
+
+CI/CD
+- gitlab runner
+- building docker image
+- building helm chart
+- push to artifactory
+- k8s deployment yaml
+- deploy
+
