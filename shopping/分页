@@ -1,0 +1,11 @@
+分页可以定义分页偏移的key来做
+struct PageOffsetKey {
+  i64 last_item_id
+  i32 last_item_rank
+  string index_id
+  double last_item_score
+  Timestamp last_item_timestamp
+}
+
+请求时带偏移key
+返回时更新偏移key
