@@ -1,0 +1,63 @@
+### Name
+Phone | Email | Address
+https://github.com/
+https://www.linkedin.com/in//
+
+### Summary
+10+ years of experience in distributed system design and development.
+AWS Certified Solutions Architect.
+
+### Education
+##### Sep 2008 - Mar 2011 | Xidian University | Xi’an, China 
+- Master of Computer Science 
+- Top 15% (84.3/100)
+
+##### Sep 2004 - Jul 2008 | Xidian University | Xi’an, China
+- Bachelor of Network Engineering
+
+### Work Experience
+##### Oct 2018 - Present | Shopkick | Toronto, Canada | Senior Software Engineer - Backend
+- Design and implement highly available backend services and internal tools for Shopkick using Java, Python, Kafka, Couchbase, Memcached, MySQL, BigQuery, FireStore, and GCP.
+- Solve, investigate, and troubleshoot the root cause of backend services problems.
+- Mentor junior engineers on defensive coding and designing decoupled, reusable modules.
+- Improved the admin panel's performance by 2 times by refactoring the API.
+- Improved the bulk uploader's performance by 50% by introducing the multi-thread model.
+- Improved team's working efficiency by building a Java project initializer.
+- Served millions of users.
+
+##### Jan 2016 - Jul 2018 | WeBank | Shenzhen, China | Senior Software Engineer - Backend
+- Design and implement highly available backend services for WeBank financial online products using Java, Spring boot, RocketMQ, Redis, MySQL, HBase, Nginx, and Tencent Cloud.
+- Solve, investigate, and troubleshoot the root cause of backend services problems.
+- Mentor junior engineers on defensive coding and designing decoupled, reusable modules.
+- Improved system writing performance by 15% by refactoring API.
+- Improved system reading performance by 50% by using the multi-level cache model.
+- Improved troubleshooting time by 70% by introducing the globally unique id, matrixes, and logs
+- Served hundreds of millions of users.
+
+##### Jan 2015 - Jan 2016 | Jiangzhi | Shenzhen, China | Senior Software Engineer - Backend
+- Design and implement highly available backend services for an educational app using Python, Tornado, Django, MongoDB, Memcached, Nginx, and Tencent Cloud.
+- Solve, investigate, and troubleshoot the root cause of backend services problems.
+- Be responsible for overall planning and tracking of the development activities.
+- Mentor junior engineers on defensive coding and designing decoupled, reusable modules.
+- Improved team's work efficiency by 20% by building a python code generator.
+- Served more than 300,000 students.
+
+##### Apr 2011 - Jan 2015 | Tencent | Shenzhen, China | Software Engineer - Backend
+- Design and implement highly available backend services for mobile games using C++, Python, TSf4g, TCaplus, TMem, MySQL, Shell, and Tencent Cloud.
+- Develop web crawlers and create daily data reports for the marketing team.
+- Solve, investigate, and troubleshoot the root cause of backend services problems.
+- Be responsible for overall planning and tracking of the development activities.
+- Served hundreds of millions of users.
+
+#### Skill
+- Distributed System Design
+- Algorithm and Data Structure
+- Python, Java, C++
+- Pylons, Flask, Django, Tornado, Dropwizard, Spring Boot
+- Kafka, Kestrel, RocketMQ
+- Memcached, Redis, Couchbase, Cassandra, HBase, MySQL, Cloud Firestore
+- K8s, Helm, Docker
+- GCP, AWS, Tencent Cloud
+
+#### Certificate
+- AWS Certified Solutions Architect - Associate
