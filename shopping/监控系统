@@ -1,0 +1,21 @@
+监控系统可行的技术栈
+- Prometheus, Alertmanager, Grafana, Jaeger, PagerDuty
+- Prometheus 负责收集metric, 以及告警规则
+- Alertmanager 负责管理alert, 从prometheus上接收告警规则
+- Grafana 主要是展示metric, 可视化
+- Pagerduty - incident management platform, on-call schedule, alerts in prometheus will be routed to an on-call team set up through PagerDuty.
+- Jaegar 调用链追踪, 可以看到耗时, 依赖关系, 可以用来判断slow service, 循环依赖等问题
+
+- DataDog, Opsgenie
+
+监控什么, 为啥需要?
+
+最基本的需要监控的东西有
+1. throughput - how many interactions your system is handling
+2. error count - how many erros when you handle
+3. latency - how fast the system is handling
+
+告警应该要达到什么要求
+1. actionable
+2. impact-oriented, alert issues that will impact user experiences
+3. urgent, don't false alarm
