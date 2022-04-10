@@ -1,0 +1,24 @@
+DNS 可以使用AWS route 53 geo DNS
+Load balancer 可以使用 ALB - application load balancer
+PROXY 包括 Nginx 和 HAProxy
+
+Nginx 是用来负责静态文件和请求redirect的
+HAProxy is for TCP load balancing
+haproxy is integrated with Consul
+front end server paired with Consul Agent that reports to Consul Master
+
+SQS - queue system
+in front of queue service, there is a rate limiter system
+CDN Fronted by Akamai or CloudFront, traffic split 50/50 between them,  data Source resides S3
+Front server -> Mongo Proxy -> Mongo DB
+Log collection:
+- log agent -> log aggregator -> log Data Storage service
+
+ssl termination at ALB
+
+配置管理
+- chef
+- salt
+- k8s
+
+jsonnet is an abstraction over k8s
