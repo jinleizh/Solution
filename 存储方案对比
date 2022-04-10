@@ -123,4 +123,9 @@ Data storage service
 - proxy connects to db servers
 - client connects to proxy
 
+A typical way to use Mongo
+- frontend server -> Mongo Proxy -> Mongo Server (visit Mongo Daemons by shard) -> Mongo Daemons (deployed by sharding)
+- Mongo Server will talk to multiple Mongo Daemons
+- Mongo Daemons have primary and secondary (replicas), it stores a shard of data
+
 
