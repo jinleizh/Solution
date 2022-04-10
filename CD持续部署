@@ -1,0 +1,5 @@
+我们应该提供一套部署方案, 集成了
+code commit -> gitlab CI -> deployment to dev -> promoted to stage -> promoted to canary/production
+并且可以提供notification, approval, alerting, testing
+
+We will gradually add abilities of continuous deployment, stage promotion, testing, approval, monitoring, alerting and notification
