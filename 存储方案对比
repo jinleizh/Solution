@@ -118,3 +118,9 @@ Redis
 Offline on online KV 
 - 对于存储在hadoop里的数据, 我们对外暴露这些数据时，可以采用bulk upload的形式, 把这些数据加载到offline to online的KV storage里, 加速访问查询
 
+Data storage service
+- should have a proxy
+- proxy connects to db servers
+- client connects to proxy
+
+
