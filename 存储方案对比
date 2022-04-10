@@ -101,3 +101,20 @@ Mongodb 优点 - 结构化和半结构化数据 - CP
 - 不支持事务
 - 不适合超大规模数据,例如 PT级别
 - validation hard
+
+Document DB
+- 适用与应用的schema不稳定, 一直在变化演进, 然后对事务没有要求, week schema enforcement
+- mongodb 牺牲事务, 存储的是文档形式的对象, 适合存储小型的文档, 因为大文档payload高, 无法局部更新时, 会造成重写过多的内容
+- mongodb 性能不错, 有sharding 和 持久化, 适合大多数在线业务 CRUD 操作
+
+MySQL 
+- strong schema enforcement
+- 需要事务支持, 比如银行类的业务
+
+Redis
+- key/value,  no schema, 可支持的数据结构非常灵活
+- 使用场景, 纯内存操作, 适合要求低延迟, 扩展性要求高的场景
+
+Offline on online KV 
+- 对于存储在hadoop里的数据, 我们对外暴露这些数据时，可以采用bulk upload的形式, 把这些数据加载到offline to online的KV storage里, 加速访问查询
+
