@@ -1,0 +1,7 @@
+可以在生产环境上除了常规的需要serving requests的replica外, 我们需要额外补充replica 专门用于back up
+
+例如, 针对每一个shard, 提供一个replica, 仅用于backup任务, 不serving外部请求
+
+这样我们可以通过一个cron job去产生一个这个replica的snapshot， 用于backup和数据恢复，
+比如我们可以利用生成的snapshot, 去restore数据 到stage 环境里.
+
